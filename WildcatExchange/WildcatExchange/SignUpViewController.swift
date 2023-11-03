@@ -73,19 +73,17 @@ class SignUpViewController: UIViewController {
         signUpButton.addTarget(self, action: #selector(didTapSignUpButton), for: .touchUpInside)
     }
     
-    func isValidEmail(_ email: String) -> Bool {
-        return email.hasSuffix("@davidson.edu")
-    }
+    
     
     @objc private func didTapSignUpButton() {
         guard let email = emailField.text, isValidEmail(email), let password = passwordField.text else {
-                    // Show an alert or message to the user
-                    let alert = UIAlertController(title: "Invalid Email", message: "Please use an email ending with @davidson.edu", preferredStyle: .alert)
-                    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-                    present(alert, animated: true, completion: nil)
-                    return
-                }
-            
+            // Show an alert or message to the user
+            let alert = UIAlertController(title: "Invalid Email", message: "Please use an email ending with @davidson.edu", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            present(alert, animated: true, completion: nil)
+            return
+        }
+        
         guard let displayName = nameField.text?.trimmingCharacters(in: .whitespacesAndNewlines),
               let phoneNum = phoneField.text?.trimmingCharacters(in: .whitespacesAndNewlines),
               let email = emailField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -96,35 +94,52 @@ class SignUpViewController: UIViewController {
             self.present(alert, animated: true, completion: nil)
             return
         }
-                
+        
         
         Auth.auth().createUser(withEmail: email, password: password) { (authResult, error) in
             if let error = error {
-                // Handle the error
-                let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-                self.present(alert, animated: true, completion: nil)
+                self.presentAlert(title: "Error", message: error.localizedDescription)
                 return
             }
             
-            // User was created successfully, now set the user display name
-            if let user = authResult?.user {
-                let changeRequest = user.createProfileChangeRequest()
-                changeRequest.displayName = displayName
-                changeRequest.commitChanges { (error) in
-                    if let error = error {
-                        //TODO: Handle the error
-                        return
-                    }
-                    self.saveUserInfoToFirestore(userId: user.uid, name: displayName, email: email, phoneNum: phoneNum)
-
-                    
-                    // Navigate to the sign in screen
-                    self.navigationController?.popViewController(animated: true)
-
+            guard let user = authResult?.user else {
+                self.presentAlert(title: "Error", message: "Unable to get user information.")
+                return
+            }
+            
+            let changeRequest = user.createProfileChangeRequest()
+            changeRequest.displayName = displayName
+            changeRequest.commitChanges { (error) in
+                if let error = error {
+                    self.presentAlert(title: "Error", message: error.localizedDescription)
+                    return
                 }
+                
+                self.saveUserInfoToFirestore(userId: user.uid, name: displayName, email: email, phoneNum: phoneNum)
+                
+                user.sendEmailVerification { (error) in
+                    if let error = error {
+                        print("Error sending verification email: \(error.localizedDescription)")
+                        self.presentAlert(title: "Error", message: error.localizedDescription)
+                    } else {
+                        self.presentAlert(title: "Verification Email Sent", message: "Please check your email and verify your account.")
+                    }
+                }
+                
+                // Navigate to the sign in screen
+                self.navigationController?.popViewController(animated: true)
             }
         }
+    }
+    
+    func isValidEmail(_ email: String) -> Bool {
+        return email.hasSuffix("@davidson.edu")
+    }
+
+    func presentAlert(title: String, message: String) {
+            let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
     }
     
     func saveUserInfoToFirestore(userId: String, name: String, email: String, phoneNum: String) {
@@ -145,8 +160,6 @@ class SignUpViewController: UIViewController {
             print("User data saved to Firestore")
         }
     }
-
-
 
 
     

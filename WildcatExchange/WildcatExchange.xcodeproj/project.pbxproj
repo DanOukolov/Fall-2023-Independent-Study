@@ -22,6 +22,7 @@
 		2005EFF92AEB79020028FDFD /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = 2005EFF82AEB79020028FDFD /* FirebaseAppCheck */; };
 		2005EFFC2AEB86480028FDFD /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 2005EFFB2AEB86480028FDFD /* FirebaseAuth */; };
 		2005EFFE2AEB898A0028FDFD /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 2005EFFD2AEB898A0028FDFD /* FirebaseFirestore */; };
+		20C5E39D2AF3754F0085B571 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C5E39C2AF3754F0085B571 /* UserProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		2005EFE52AEB141C0028FDFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2005EFEB2AEB63B80028FDFD /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		2005EFED2AEB76AD0028FDFD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		20C5E39C2AF3754F0085B571 /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 			children = (
 				2005EFD72AEB141B0028FDFD /* AppDelegate.swift */,
 				2005EFD92AEB141B0028FDFD /* SceneDelegate.swift */,
+				20C5E39C2AF3754F0085B571 /* UserProfileViewController.swift */,
 				2005EFDB2AEB141B0028FDFD /* ViewController.swift */,
 				2005EFEB2AEB63B80028FDFD /* SignUpViewController.swift */,
 				2005EFDD2AEB141B0028FDFD /* Main.storyboard */,
@@ -180,6 +183,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2005EFDC2AEB141B0028FDFD /* ViewController.swift in Sources */,
+				20C5E39D2AF3754F0085B571 /* UserProfileViewController.swift in Sources */,
 				2005EFD82AEB141B0028FDFD /* AppDelegate.swift in Sources */,
 				2005EFEC2AEB63B80028FDFD /* SignUpViewController.swift in Sources */,
 				2005EFDA2AEB141B0028FDFD /* SceneDelegate.swift in Sources */,
