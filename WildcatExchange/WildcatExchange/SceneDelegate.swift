@@ -17,7 +17,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let window = self.window else { return }
         
         window.rootViewController = vc
-        // Add the transition if animated
         if animated {
             UIView.transition(with: window,
                               duration: 0.3,
@@ -34,12 +33,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window = window
 
         if Auth.auth().currentUser != nil {
-            // User is signed in, show the main tab bar
             let mainTabBar = MainTabBarController()
-            mainTabBar.selectedIndex = 2 // Assuming index 2 is the UserProfileViewController
+            mainTabBar.selectedIndex = 2
             window.rootViewController = mainTabBar
         } else {
-            // No user is signed in, show the sign-in screen
             let signInVC = SignInViewController()
             window.rootViewController = UINavigationController(rootViewController: signInVC)
         }

@@ -161,7 +161,6 @@ class UserProfileViewController: UIViewController, UIImagePickerControllerDelega
     }
     
     @objc private func didTapChangeProfilePicButton() {
-        // This will call the image picker method you have to define
         didTapProfileImageView()
     }
     
@@ -255,7 +254,7 @@ class UserProfileViewController: UIViewController, UIImagePickerControllerDelega
             changeProfilePicButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             changeProfilePicButton.topAnchor.constraint(equalTo: profileImageView.bottomAnchor, constant: 20),
             changeProfilePicButton.widthAnchor.constraint(equalToConstant: 200),
-            changeProfilePicButton.heightAnchor.constraint(equalToConstant: 40) // Adjust height if needed
+            changeProfilePicButton.heightAnchor.constraint(equalToConstant: 40)
         ])
         
         

@@ -229,7 +229,7 @@ class SignInViewController: UIViewController {
             signInButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
             signInButton.heightAnchor.constraint(equalToConstant: 44),
             
-            forgotPasswordButton.topAnchor.constraint(equalTo: signInButton.bottomAnchor, constant: 10),  // Adjusted this for space
+            forgotPasswordButton.topAnchor.constraint(equalTo: signInButton.bottomAnchor, constant: 10),  
             forgotPasswordButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             
             signUpButton.topAnchor.constraint(equalTo: forgotPasswordButton.bottomAnchor, constant: 5),
