@@ -25,9 +25,8 @@ class MainTabBarController: UITabBarController {
         userProfileViewController.tabBarItem = UITabBarItem(title: "Profile", image: UIImage(named: "profileButton"), selectedImage: UIImage(named: "profileIconFilled"))
         
         
-        // Assign view controllers to the tab bar
         self.viewControllers = [homeViewController, chatViewController, userProfileViewController].map {
-            UINavigationController(rootViewController: $0) // Embed each in a navigation controller
+            UINavigationController(rootViewController: $0)
         }
     }
 }
