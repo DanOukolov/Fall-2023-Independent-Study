@@ -96,10 +96,17 @@ class SignInViewController: UIViewController {
                 return
             }
             
-            if let user = authResult?.user, user.isEmailVerified {
-                let userProfileVC = UserProfileViewController()
-                strongSelf.navigationController?.pushViewController(userProfileVC, animated: true)
-            } else {
+            if let user = authResult?.user {
+                if !user.isEmailVerified {
+                    DispatchQueue.main.async {
+                        let mainTabBar = MainTabBarController()
+                        mainTabBar.selectedIndex = 2
+                        if let sceneDelegate = strongSelf.view.window?.windowScene?.delegate as? SceneDelegate {
+                            sceneDelegate.changeRootViewController(mainTabBar, animated: true)
+                        }
+                    }
+                }
+            }  else {
                 let alert = UIAlertController(title: "Email Not Verified", message: "Please verify your email before signing in.", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
                 strongSelf.present(alert, animated: true, completion: nil)
@@ -171,7 +178,7 @@ class SignInViewController: UIViewController {
         scrollView.addSubview(forgotPasswordButton)
         signInButton.addTarget(self, action: #selector(didTapSignInButton), for: .touchUpInside)
         forgotPasswordButton.addTarget(self, action: #selector(didTapForgotPasswordButton), for: .touchUpInside)
-    
+        
         topImageView.image = UIImage(named: "loginPic")
         
         
@@ -225,7 +232,7 @@ class SignInViewController: UIViewController {
             forgotPasswordButton.topAnchor.constraint(equalTo: signInButton.bottomAnchor, constant: 10),  // Adjusted this for space
             forgotPasswordButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             
-            signUpButton.topAnchor.constraint(equalTo: forgotPasswordButton.bottomAnchor, constant: 5),  // Adjusted this for space
+            signUpButton.topAnchor.constraint(equalTo: forgotPasswordButton.bottomAnchor, constant: 5),
             signUpButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             signUpButton.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor, constant: -20)
         ])

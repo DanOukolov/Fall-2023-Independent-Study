@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		200405482AFA225E006AC6B9 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 200405472AFA225E006AC6B9 /* FirebaseStorage */; };
+		2004054B2AFA26CA006AC6B9 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 2004054A2AFA26CA006AC6B9 /* SDWebImage */; };
+		2004054D2AFA26CA006AC6B9 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2004054C2AFA26CA006AC6B9 /* SDWebImageMapKit */; };
+		2004054F2AFB3928006AC6B9 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2004054E2AFB3928006AC6B9 /* MainTabBarViewController.swift */; };
+		200405522AFB3979006AC6B9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200405512AFB3979006AC6B9 /* HomeViewController.swift */; };
+		200405542AFB3988006AC6B9 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200405532AFB3988006AC6B9 /* ChatViewController.swift */; };
 		2005EFD82AEB141B0028FDFD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2005EFD72AEB141B0028FDFD /* AppDelegate.swift */; };
 		2005EFDA2AEB141B0028FDFD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2005EFD92AEB141B0028FDFD /* SceneDelegate.swift */; };
 		2005EFDC2AEB141B0028FDFD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2005EFDB2AEB141B0028FDFD /* ViewController.swift */; };
@@ -26,6 +32,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2004054E2AFB3928006AC6B9 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
+		200405512AFB3979006AC6B9 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		200405532AFB3988006AC6B9 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		2005EFD42AEB141B0028FDFD /* WildcatExchange.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WildcatExchange.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2005EFD72AEB141B0028FDFD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2005EFD92AEB141B0028FDFD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +58,9 @@
 				2005EFF12AEB79020028FDFD /* FirebaseAnalytics in Frameworks */,
 				2005EFF32AEB79020028FDFD /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
 				2005EFF92AEB79020028FDFD /* FirebaseAppCheck in Frameworks */,
+				200405482AFA225E006AC6B9 /* FirebaseStorage in Frameworks */,
+				2004054D2AFA26CA006AC6B9 /* SDWebImageMapKit in Frameworks */,
+				2004054B2AFA26CA006AC6B9 /* SDWebImage in Frameworks */,
 				2005EFF72AEB79020028FDFD /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
 				2005EFFE2AEB898A0028FDFD /* FirebaseFirestore in Frameworks */,
 			);
@@ -57,6 +69,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		200405502AFB3947006AC6B9 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				2005EFDB2AEB141B0028FDFD /* ViewController.swift */,
+				20C5E39C2AF3754F0085B571 /* UserProfileViewController.swift */,
+				2005EFEB2AEB63B80028FDFD /* SignUpViewController.swift */,
+				2004054E2AFB3928006AC6B9 /* MainTabBarViewController.swift */,
+				200405512AFB3979006AC6B9 /* HomeViewController.swift */,
+				200405532AFB3988006AC6B9 /* ChatViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		2005EFCB2AEB141B0028FDFD = {
 			isa = PBXGroup;
 			children = (
@@ -77,11 +102,9 @@
 		2005EFD62AEB141B0028FDFD /* WildcatExchange */ = {
 			isa = PBXGroup;
 			children = (
+				200405502AFB3947006AC6B9 /* ViewControllers */,
 				2005EFD72AEB141B0028FDFD /* AppDelegate.swift */,
 				2005EFD92AEB141B0028FDFD /* SceneDelegate.swift */,
-				20C5E39C2AF3754F0085B571 /* UserProfileViewController.swift */,
-				2005EFDB2AEB141B0028FDFD /* ViewController.swift */,
-				2005EFEB2AEB63B80028FDFD /* SignUpViewController.swift */,
 				2005EFDD2AEB141B0028FDFD /* Main.storyboard */,
 				2005EFE02AEB141C0028FDFD /* Assets.xcassets */,
 				2005EFE22AEB141C0028FDFD /* LaunchScreen.storyboard */,
@@ -122,6 +145,9 @@
 				2005EFF82AEB79020028FDFD /* FirebaseAppCheck */,
 				2005EFFB2AEB86480028FDFD /* FirebaseAuth */,
 				2005EFFD2AEB898A0028FDFD /* FirebaseFirestore */,
+				200405472AFA225E006AC6B9 /* FirebaseStorage */,
+				2004054A2AFA26CA006AC6B9 /* SDWebImage */,
+				2004054C2AFA26CA006AC6B9 /* SDWebImageMapKit */,
 			);
 			productName = WildcatExchange;
 			productReference = 2005EFD42AEB141B0028FDFD /* WildcatExchange.app */;
@@ -153,6 +179,7 @@
 			mainGroup = 2005EFCB2AEB141B0028FDFD;
 			packageReferences = (
 				2005EFEF2AEB79020028FDFD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				200405492AFA26CA006AC6B9 /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
 			productRefGroup = 2005EFD52AEB141B0028FDFD /* Products */;
 			projectDirPath = "";
@@ -184,8 +211,11 @@
 			files = (
 				2005EFDC2AEB141B0028FDFD /* ViewController.swift in Sources */,
 				20C5E39D2AF3754F0085B571 /* UserProfileViewController.swift in Sources */,
+				200405542AFB3988006AC6B9 /* ChatViewController.swift in Sources */,
 				2005EFD82AEB141B0028FDFD /* AppDelegate.swift in Sources */,
+				2004054F2AFB3928006AC6B9 /* MainTabBarViewController.swift in Sources */,
 				2005EFEC2AEB63B80028FDFD /* SignUpViewController.swift in Sources */,
+				200405522AFB3979006AC6B9 /* HomeViewController.swift in Sources */,
 				2005EFDA2AEB141B0028FDFD /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -409,6 +439,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		200405492AFA26CA006AC6B9 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.18.4;
+			};
+		};
 		2005EFEF2AEB79020028FDFD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -420,6 +458,21 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		200405472AFA225E006AC6B9 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2005EFEF2AEB79020028FDFD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		2004054A2AFA26CA006AC6B9 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 200405492AFA26CA006AC6B9 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		2004054C2AFA26CA006AC6B9 /* SDWebImageMapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 200405492AFA26CA006AC6B9 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImageMapKit;
+		};
 		2005EFF02AEB79020028FDFD /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 2005EFEF2AEB79020028FDFD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
