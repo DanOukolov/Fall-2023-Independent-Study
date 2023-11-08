@@ -98,7 +98,6 @@ class UserProfileViewController: UIViewController, UIImagePickerControllerDelega
         guard let userId = Auth.auth().currentUser?.uid else { return }
         
         let db = Firestore.firestore()
-        let storageRef = Storage.storage().reference()
         
         db.collection("users").document(userId).getDocument { [weak self] (document, error) in
             guard let self = self, let document = document, document.exists,
@@ -151,14 +150,15 @@ class UserProfileViewController: UIViewController, UIImagePickerControllerDelega
         guard let userId = Auth.auth().currentUser?.uid else { return }
         let db = Firestore.firestore()
         
-        db.collection("users").document(userId).updateData(["profilePictureURL": url]) { [weak self] error in
-            guard let self = self else { return }
-            
+        db.collection("users").document(userId).updateData(["profilePictureURL": url]) { error in
             if let error = error {
                 print("Error updating profile picture URL: \(error.localizedDescription)")
+            } else {
+                print("Profile picture URL successfully updated")
             }
         }
     }
+
     
     @objc private func didTapChangeProfilePicButton() {
         didTapProfileImageView()
