@@ -8,6 +8,7 @@
 import UIKit
 import FirebaseAuth
 import FirebaseFirestore
+import PhotosUI
 
 
 
@@ -19,6 +20,8 @@ class SignUpViewController: UIViewController {
         label.font = UIFont.systemFont(ofSize: 24, weight: .bold)
         return label
     }()
+    
+
     
     private let nameField: UITextField = {
         let textField = UITextField()
@@ -65,6 +68,8 @@ class SignUpViewController: UIViewController {
         button.layer.cornerRadius = 5
         return button
     }()
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -135,33 +140,34 @@ class SignUpViewController: UIViewController {
     func isValidEmail(_ email: String) -> Bool {
         return email.hasSuffix("@davidson.edu")
     }
-
+    
     func presentAlert(title: String, message: String) {
-            let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
     
     func saveUserInfoToFirestore(userId: String, name: String, email: String, phoneNum: String) {
         let db = Firestore.firestore()
-
+        
         let userData: [String: Any] = [
             "name": name,
             "email": email,
             "phoneNum": phoneNum,
+            "profilePictureURL": "https://firebasestorage.googleapis.com/v0/b/ios-dev-b80ed.appspot.com/o/blank-profile-picture-973460_1280.png?alt=media&token=e9a0a083-fa9c-4eb9-afa6-6c67da7b50ae"
         ]
-
-        // Save the user data
+        
         db.collection("users").document(userId).setData(userData) { error in
             if let error = error {
                 print("Error saving user data to Firestore: \(error)")
                 return
             }
-            print("User data saved to Firestore")
+            print("User data saved to Firestore with a blank profile picture.")
         }
     }
-
-
+    
+    
+    
     
     private func setupUI() {
         // Add the subviews
