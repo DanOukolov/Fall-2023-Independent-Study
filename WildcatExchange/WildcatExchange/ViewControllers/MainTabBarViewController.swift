@@ -8,8 +8,6 @@
 import Foundation
 import UIKit
 
-import UIKit
-
 class MainTabBarController: UITabBarController {
     
     override func viewDidLoad() {
