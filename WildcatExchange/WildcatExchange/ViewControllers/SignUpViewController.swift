@@ -170,7 +170,6 @@ class SignUpViewController: UIViewController {
     
     
     private func setupUI() {
-        // Add the subviews
         view.addSubview(titleLabel)
         view.addSubview(nameField)
         view.addSubview(phoneField)
@@ -179,7 +178,6 @@ class SignUpViewController: UIViewController {
         view.addSubview(confirmPasswordField)
         view.addSubview(signUpButton)
         
-        // Use Auto Layout to set the positions
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         nameField.translatesAutoresizingMaskIntoConstraints = false
         phoneField.translatesAutoresizingMaskIntoConstraints = false
