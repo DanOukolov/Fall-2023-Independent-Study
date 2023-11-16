@@ -29,10 +29,8 @@
 		2005EFFC2AEB86480028FDFD /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 2005EFFB2AEB86480028FDFD /* FirebaseAuth */; };
 		2005EFFE2AEB898A0028FDFD /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 2005EFFD2AEB898A0028FDFD /* FirebaseFirestore */; };
 		20C5E39D2AF3754F0085B571 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C5E39C2AF3754F0085B571 /* UserProfileViewController.swift */; };
-		2AECB0772AFE6B1F00443165 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AECB0762AFE6B1F00443165 /* Product.swift */; };
-		2AECB0792AFE6B6800443165 /* ProductRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AECB0782AFE6B6800443165 /* ProductRow.swift */; };
-		2AECB07B2AFE6B9F00443165 /* ProductDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AECB07A2AFE6B9F00443165 /* ProductDetailView.swift */; };
-		2AECB07D2AFE6C1E00443165 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AECB07C2AFE6C1E00443165 /* ContentView.swift */; };
+		2A34A5512B05C65F00EAF9B8 /* SampleMarketplaceData.json in Resources */ = {isa = PBXBuildFile; fileRef = 2A34A5502B05C65F00EAF9B8 /* SampleMarketplaceData.json */; };
+		2A34A5532B05C69800EAF9B8 /* MarketplaceItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A34A5522B05C69800EAF9B8 /* MarketplaceItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,10 +48,8 @@
 		2005EFEB2AEB63B80028FDFD /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		2005EFED2AEB76AD0028FDFD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		20C5E39C2AF3754F0085B571 /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
-		2AECB0762AFE6B1F00443165 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
-		2AECB0782AFE6B6800443165 /* ProductRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRow.swift; sourceTree = "<group>"; };
-		2AECB07A2AFE6B9F00443165 /* ProductDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailView.swift; sourceTree = "<group>"; };
-		2AECB07C2AFE6C1E00443165 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2A34A5502B05C65F00EAF9B8 /* SampleMarketplaceData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = SampleMarketplaceData.json; path = ../../../../../Downloads/SampleMarketplaceData.json; sourceTree = "<group>"; };
+		2A34A5522B05C69800EAF9B8 /* MarketplaceItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketplaceItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,16 +76,14 @@
 		200405502AFB3947006AC6B9 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				2A34A5502B05C65F00EAF9B8 /* SampleMarketplaceData.json */,
 				2005EFDB2AEB141B0028FDFD /* ViewController.swift */,
 				20C5E39C2AF3754F0085B571 /* UserProfileViewController.swift */,
 				2005EFEB2AEB63B80028FDFD /* SignUpViewController.swift */,
 				2004054E2AFB3928006AC6B9 /* MainTabBarViewController.swift */,
 				200405512AFB3979006AC6B9 /* HomeViewController.swift */,
 				200405532AFB3988006AC6B9 /* ChatViewController.swift */,
-				2AECB0762AFE6B1F00443165 /* Product.swift */,
-				2AECB0782AFE6B6800443165 /* ProductRow.swift */,
-				2AECB07A2AFE6B9F00443165 /* ProductDetailView.swift */,
-				2AECB07C2AFE6C1E00443165 /* ContentView.swift */,
+				2A34A5522B05C69800EAF9B8 /* MarketplaceItem.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -209,6 +203,7 @@
 			files = (
 				2005EFE42AEB141C0028FDFD /* LaunchScreen.storyboard in Resources */,
 				2005EFEE2AEB76AD0028FDFD /* GoogleService-Info.plist in Resources */,
+				2A34A5512B05C65F00EAF9B8 /* SampleMarketplaceData.json in Resources */,
 				2005EFE12AEB141C0028FDFD /* Assets.xcassets in Resources */,
 				2005EFDF2AEB141B0028FDFD /* Main.storyboard in Resources */,
 			);
@@ -223,12 +218,9 @@
 			files = (
 				2005EFDC2AEB141B0028FDFD /* ViewController.swift in Sources */,
 				20C5E39D2AF3754F0085B571 /* UserProfileViewController.swift in Sources */,
-				2AECB07D2AFE6C1E00443165 /* ContentView.swift in Sources */,
-				2AECB07B2AFE6B9F00443165 /* ProductDetailView.swift in Sources */,
-				2AECB0792AFE6B6800443165 /* ProductRow.swift in Sources */,
-				2AECB0772AFE6B1F00443165 /* Product.swift in Sources */,
 				200405542AFB3988006AC6B9 /* ChatViewController.swift in Sources */,
 				2005EFD82AEB141B0028FDFD /* AppDelegate.swift in Sources */,
+				2A34A5532B05C69800EAF9B8 /* MarketplaceItem.swift in Sources */,
 				2004054F2AFB3928006AC6B9 /* MainTabBarViewController.swift in Sources */,
 				2005EFEC2AEB63B80028FDFD /* SignUpViewController.swift in Sources */,
 				200405522AFB3979006AC6B9 /* HomeViewController.swift in Sources */,
