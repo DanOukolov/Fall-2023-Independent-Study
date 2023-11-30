@@ -13,7 +13,7 @@ import FirebaseAuth
 import SDWebImage
 
 
-class EditLisitingViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class EditListingViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     var productToEdit: Product?
     private var isImageChanged = false
@@ -121,7 +121,6 @@ class EditLisitingViewController: UIViewController, UITextFieldDelegate, UIImage
             return
         }
         
-        let updatedProduct = Product(id: product.id, userId: product.userId, userName: product.userName, userProfileURL: product.userProfileURL, productName: name, description: description, price: price, imageURL: product.imageURL, date: product.date)
         
         if isImageChanged, let newImage = imageView.image {
             uploadImage(newImage) { [weak self] imageUrl in
