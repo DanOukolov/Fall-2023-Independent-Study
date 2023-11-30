@@ -241,9 +241,9 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     
     private func editProduct(_ product: Product, at indexPath: IndexPath) {
-        //let editVC = EditProductViewController()
-        //editVC.product = product
-        //navigationController?.pushViewController(editVC, animated: true)
+        let editVC = EditLisitingViewController()
+        editVC.productToEdit = product
+        navigationController?.pushViewController(editVC, animated: true)
     }
     
     

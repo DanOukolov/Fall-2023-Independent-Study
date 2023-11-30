@@ -31,6 +31,7 @@
 		208A15C82B056B1B00AAC230 /* AddListingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208A15C72B056B1B00AAC230 /* AddListingViewController.swift */; };
 		208A15CA2B0582AB00AAC230 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208A15C92B0582AB00AAC230 /* ProductTableViewCell.swift */; };
 		20C5E39D2AF3754F0085B571 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C5E39C2AF3754F0085B571 /* UserProfileViewController.swift */; };
+		20E750642B18FF7A000537DE /* EditLisitingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E750632B18FF7A000537DE /* EditLisitingViewController.swift */; };
 		2AECB0772AFE6B1F00443165 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AECB0762AFE6B1F00443165 /* Product.swift */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +52,7 @@
 		208A15C72B056B1B00AAC230 /* AddListingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddListingViewController.swift; sourceTree = "<group>"; };
 		208A15C92B0582AB00AAC230 /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
 		20C5E39C2AF3754F0085B571 /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
+		20E750632B18FF7A000537DE /* EditLisitingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditLisitingViewController.swift; sourceTree = "<group>"; };
 		2AECB0762AFE6B1F00443165 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,8 +80,6 @@
 		200405502AFB3947006AC6B9 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				2A34A5542B071F4500EAF9B8 /* im.jpg */,
-				2A34A5502B05C65F00EAF9B8 /* SampleMarketplaceData.json */,
 				2005EFDB2AEB141B0028FDFD /* ViewController.swift */,
 				20C5E39C2AF3754F0085B571 /* UserProfileViewController.swift */,
 				2005EFEB2AEB63B80028FDFD /* SignUpViewController.swift */,
@@ -89,6 +89,7 @@
 				2AECB0762AFE6B1F00443165 /* Product.swift */,
 				208A15C72B056B1B00AAC230 /* AddListingViewController.swift */,
 				208A15C92B0582AB00AAC230 /* ProductTableViewCell.swift */,
+				20E750632B18FF7A000537DE /* EditLisitingViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -208,10 +209,8 @@
 			files = (
 				2005EFE42AEB141C0028FDFD /* LaunchScreen.storyboard in Resources */,
 				2005EFEE2AEB76AD0028FDFD /* GoogleService-Info.plist in Resources */,
-				2A34A5512B05C65F00EAF9B8 /* SampleMarketplaceData.json in Resources */,
 				2005EFE12AEB141C0028FDFD /* Assets.xcassets in Resources */,
 				2005EFDF2AEB141B0028FDFD /* Main.storyboard in Resources */,
-				2A34A5552B071F4500EAF9B8 /* im.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,10 +223,10 @@
 			files = (
 				2005EFDC2AEB141B0028FDFD /* ViewController.swift in Sources */,
 				20C5E39D2AF3754F0085B571 /* UserProfileViewController.swift in Sources */,
+				20E750642B18FF7A000537DE /* EditLisitingViewController.swift in Sources */,
 				2AECB0772AFE6B1F00443165 /* Product.swift in Sources */,
 				200405542AFB3988006AC6B9 /* ChatViewController.swift in Sources */,
 				2005EFD82AEB141B0028FDFD /* AppDelegate.swift in Sources */,
-				2A34A5532B05C69800EAF9B8 /* MarketplaceItem.swift in Sources */,
 				2004054F2AFB3928006AC6B9 /* MainTabBarViewController.swift in Sources */,
 				208A15CA2B0582AB00AAC230 /* ProductTableViewCell.swift in Sources */,
 				208A15C82B056B1B00AAC230 /* AddListingViewController.swift in Sources */,
