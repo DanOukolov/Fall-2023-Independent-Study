@@ -12,10 +12,10 @@ struct ProductDetailView: View {
 
     var body: some View {
         VStack {
-            Image(product.imageName)
+            Image(product.imageURL)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-            Text(product.name)
+            Text(product.userProfileURL)
                 .font(.headline)
             Text(product.description)
                 .font(.subheadline)

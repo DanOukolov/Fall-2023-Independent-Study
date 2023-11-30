@@ -70,7 +70,6 @@ class UserProfileViewController: UIViewController, UIImagePickerControllerDelega
     }()
     
     @objc private func didTapProfileImageView() {
-        // Present the image picker
         var configuration = PHPickerConfiguration()
         configuration.selectionLimit = 1
         configuration.filter = .images
@@ -95,7 +94,12 @@ class UserProfileViewController: UIViewController, UIImagePickerControllerDelega
     }
     
     private func loadUserProfile() {
-        guard let userId = Auth.auth().currentUser?.uid else { return }
+        guard let userId = Auth.auth().currentUser?.uid else {
+            print("User not logged in")
+            return
+        }
+
+        print("Fetching data for user ID: \(userId)")
         
         let db = Firestore.firestore()
         

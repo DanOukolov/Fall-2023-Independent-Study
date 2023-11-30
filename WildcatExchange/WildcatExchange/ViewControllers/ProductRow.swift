@@ -12,10 +12,10 @@ struct ProductRow: View {
 
     var body: some View {
         HStack {
-            Image(product.imageName)
+            Image(product.imageURL)
                 .resizable()
                 .frame(width: 50, height: 50)
-            Text(product.name)
+            Text(product.productName)
             Spacer()
             Text("$\(product.price, specifier: "%.2f")")
         }
