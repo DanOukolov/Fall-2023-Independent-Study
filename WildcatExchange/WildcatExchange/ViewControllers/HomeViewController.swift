@@ -64,12 +64,12 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     private func confirmAndDeleteProduct(_ product: Product, at indexPath: IndexPath) {
         guard let currentUserId = Auth.auth().currentUser?.uid else {
-            print("Error: No user logged in")
+            showAlert(withMessage: "Error: No user logged in")
             return
         }
         
         if currentUserId != product.userId {
-            print("You can only delete your own products.")
+            showAlert(withMessage: "You can only delete your own products.")
             return
         }
         
@@ -107,10 +107,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             }
         }
     }
-
-
-    
-    
     
     private func listenForProducts() {
         let db = Firestore.firestore()
@@ -241,10 +237,29 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     
     private func editProduct(_ product: Product, at indexPath: IndexPath) {
-        let editVC = EditLisitingViewController()
+        guard let currentUserId = Auth.auth().currentUser?.uid else {
+            showAlert(withMessage: "Error: No user logged in")
+            return
+        }
+
+        if currentUserId != product.userId {
+            showAlert(withMessage: "You can only edit your own products.")
+            return
+        }
+
+        let editVC = EditListingViewController()
         editVC.productToEdit = product
         navigationController?.pushViewController(editVC, animated: true)
     }
+    
+    private func showAlert(withMessage message: String) {
+        let alert = UIAlertController(title: "Alert", message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(alert, animated: true)
+    }
+
+
+
     
     
 }
