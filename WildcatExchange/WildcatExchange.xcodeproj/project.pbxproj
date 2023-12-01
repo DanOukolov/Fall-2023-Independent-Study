@@ -32,6 +32,7 @@
 		208A15CA2B0582AB00AAC230 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208A15C92B0582AB00AAC230 /* ProductTableViewCell.swift */; };
 		20C5E39D2AF3754F0085B571 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C5E39C2AF3754F0085B571 /* UserProfileViewController.swift */; };
 		20E750642B18FF7A000537DE /* EditLisitingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E750632B18FF7A000537DE /* EditLisitingViewController.swift */; };
+		2AE6875B2B19EE2E00D388C9 /* messaging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE6875A2B19EE2E00D388C9 /* messaging.swift */; };
 		2AECB0772AFE6B1F00443165 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AECB0762AFE6B1F00443165 /* Product.swift */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +54,7 @@
 		208A15C92B0582AB00AAC230 /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
 		20C5E39C2AF3754F0085B571 /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
 		20E750632B18FF7A000537DE /* EditLisitingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditLisitingViewController.swift; sourceTree = "<group>"; };
+		2AE6875A2B19EE2E00D388C9 /* messaging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = messaging.swift; sourceTree = "<group>"; };
 		2AECB0762AFE6B1F00443165 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,6 +88,7 @@
 				2004054E2AFB3928006AC6B9 /* MainTabBarViewController.swift */,
 				200405512AFB3979006AC6B9 /* HomeViewController.swift */,
 				200405532AFB3988006AC6B9 /* ChatViewController.swift */,
+				2AE6875A2B19EE2E00D388C9 /* messaging.swift */,
 				2AECB0762AFE6B1F00443165 /* Product.swift */,
 				208A15C72B056B1B00AAC230 /* AddListingViewController.swift */,
 				208A15C92B0582AB00AAC230 /* ProductTableViewCell.swift */,
@@ -231,6 +234,7 @@
 				208A15CA2B0582AB00AAC230 /* ProductTableViewCell.swift in Sources */,
 				208A15C82B056B1B00AAC230 /* AddListingViewController.swift in Sources */,
 				2005EFEC2AEB63B80028FDFD /* SignUpViewController.swift in Sources */,
+				2AE6875B2B19EE2E00D388C9 /* messaging.swift in Sources */,
 				200405522AFB3979006AC6B9 /* HomeViewController.swift in Sources */,
 				2005EFDA2AEB141B0028FDFD /* SceneDelegate.swift in Sources */,
 			);
